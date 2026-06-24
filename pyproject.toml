@@ -25,6 +25,10 @@ dev = [
     "pytest>=7.0.0",
 ]
 
+[tool.setuptools]
+# Explicitly whitelist loose top-level files to bypass flat-layout auto-discovery blocks
+py-modules = ["env_trading", "model_dqn", "train_dqn", "test_dqn"]
+
 [tool.black]
 line-length = 100
 target-version = ['py310']
