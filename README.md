@@ -2,7 +2,7 @@
 
 ## Overview
 This repository implements a production-grade, prescriptive Deep Q-Network (DQN) algorithmic execution agent optimized for interaction with a simulated XAUUSD (Gold) market sandbox environment. Shifting away from fragile directional price prediction, the agent maps structural multi-dimensional state vectors directly to optimized execution commands via a decoupled reinforcement learning architecture designed to insulate gradient trajectories from non-stationary drift.
-
+![visual aid](./rl_dqn_visual.png)
 ## Core Machine Learning Architecture
 
 ### 1. Markov Decision Process (MDP) Boundary Definition
