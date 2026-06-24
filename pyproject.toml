@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xau-autonomous-dqn-scalper"
+version = "0.1.0"
+description = "Autonomous Deep Q-Network scalper engine optimized for XAUUSD market environments."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Office/Business :: Financial :: Investment",
+]
+dependencies = [
+    "torch>=2.0.0",
+    "numpy>=1.24.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.1.0",
+    "black>=23.0.0",
+    "pytest>=7.0.0",
+]
+
+[tool.black]
+line-length = 100
+target-version = ['py310']
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "N", "I", "W", "B"]
+ignore = []
+
+[tool.ruff.lint.isort]
+known-first-party = ["env_trading", "model_dqn", "train_dqn"]
+
+[tool.ruff.lint.pep8-naming]
+ignore-names = ["X", "X_train", "X_val", "X_test", "y", "y_train", "y_val", "y_test", "Q_target"]
