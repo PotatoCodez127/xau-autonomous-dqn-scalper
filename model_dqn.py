@@ -1,6 +1,6 @@
 # model_dqn.py
-import torch
 import torch.nn as nn
+
 
 class TradingBrain(nn.Module):
     def __init__(self, input_dim=2, output_dim=3):
