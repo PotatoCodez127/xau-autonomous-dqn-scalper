@@ -18,8 +18,9 @@ class ReplayBuffer:
         self.buffer.append((state, action, reward, next_state, done))
 
     def sample(self, batch_size: int):
-        state, action, reward, next_state, done = zip(*random.sample(self.buffer, batch_size),
-                                                       strict=False)
+        state, action, reward, next_state, done = zip(
+            *random.sample(self.buffer, batch_size), strict=False
+        )
         return (
             torch.FloatTensor(np.array(state)),
             torch.LongTensor(action),
